@@ -101,6 +101,7 @@ form.addEventListener('submit', (e) => {
     const nameTest = /^[a-zA-Z]+[ ]?[a-zA-Z]+?$/;
     const validName = nameTest.test(nameValue);
   
+    //If name is not valid or is empty prevent form submission and display error message.
     if (validName === false || nameValue === '') {
       e.preventDefault();
       userName.parentElement.classList.add('not-valid');
@@ -117,6 +118,7 @@ form.addEventListener('submit', (e) => {
     const emailTest = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const validEmail = emailTest.test(emailValue);
   
+    //If email is not valid or is empty prevent form submission and display error message.
     if (validEmail === false || emailValue === '') {
       e.preventDefault();
       email.parentElement.classList.add('not-valid');
@@ -129,6 +131,7 @@ form.addEventListener('submit', (e) => {
       email.parentElement.lastElementChild.style.display = 'none';
     }
   
+    //If activity is not valid or is empty prevent form submission and display error message.
     if (activityTotal === 0) {
       e.preventDefault();
       registerActivity.parentElement.classList.add('not-valid');
@@ -145,6 +148,7 @@ form.addEventListener('submit', (e) => {
       const cardNumTest = /^\d{13,16}$/;
       const validCardNum = cardNumTest.test(cardNumValue);
   
+      //If card number is not valid or is empty prevent form submission and display error message.
       if (validCardNum === false || cardNumValue === '') {
         e.preventDefault();
         cardNum.parentElement.classList.add('not-valid');
@@ -161,6 +165,7 @@ form.addEventListener('submit', (e) => {
       const zipCodeTest = /^\d{5}$/;
       const validZipCode = zipCodeTest.test(zipCodeValue);
   
+      //If zip code is not valid or is empty prevent form submission and display error message.
       if (validZipCode === false || zipCodeValue === '') {
         e.preventDefault();
         zipCode.parentElement.classList.add('not-valid');
@@ -178,6 +183,7 @@ form.addEventListener('submit', (e) => {
       const cvvTest = /^\d{3}$/;
       const validCVV = cvvTest.test(cvvValue);
   
+      //If CVV is not valid or is empty prevent form submission and display error message.
       if (validCVV === false || cvvValue === '') {
         e.preventDefault();
         cvv.parentElement.classList.add('not-valid');
